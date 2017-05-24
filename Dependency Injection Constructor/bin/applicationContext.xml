@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="message" class="online.mrwallet.www.Message">
+		<!--for value we use value , optionally we can use index to tell on what 
+			position in constructor argument we are injecting value -->
+		<constructor-arg value="hello spring"></constructor-arg>
+		<!--for objects we use ref passing id of the bean that needs to be injected -->
+		<constructor-arg ref="messageType"></constructor-arg>
+	</bean>
+
+	<bean id="messageType" class="online.mrwallet.www.MessageType">
+		<property name="type" value="text"></property>
+	</bean>
+
+</beans>

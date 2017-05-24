@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!-- Import xmlns:p to use p namespace instead of <property> tag -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p = "http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!-- Use p:'nameOfPropertyInBean'='valueOfThePropertyInStringFormat'  
+	Use p:'nameOfPropertyInBean'-ref='idOfTheBeanObjectToInject'
+-->
+	<bean id="message" class="online.mrwallet.www.Message" p:message="Hello Spring"
+	 p:messageType-ref="messageType">
+	</bean>
+
+	<bean id="messageType" class="online.mrwallet.www.MessageType">
+		<property name="type" value="Text"></property>
+	</bean>
+
+</beans>

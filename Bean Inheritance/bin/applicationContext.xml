@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="message" class="online.mrwallet.www.Message">
+		<property name="message" value="Parent Message"></property>
+		<property name="message1" value="Parent Message 1"></property>
+	</bean>
+
+	<bean id="messageChild" class="online.mrwallet.www.MessageChild"
+		parent="message">
+		<property name="message1" value="Child Message 1"></property>
+		<property name="message2" value="Child Message 2"></property>
+	</bean>
+
+</beans>
