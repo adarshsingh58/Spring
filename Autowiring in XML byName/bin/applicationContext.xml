@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!-- we did autowiring by name. So control will check HellpSpring class and see its fields. Now it will search for a bean definition in this XML that matches the name of the fields/variables in the HellpSpring class.
+In this case, we have a bean whose name is 'messageType' and we have a variable/dependency in HellpSpring class whose name is again 'messageType'.
+So, Spring will wire HellpSPring class's dependency of variable name 'messageType' to the bean defined here as 'messageType'.
+We can still use property element to set any other property to the class.
+ -->
+   <bean id = "helloSpring" class = "com.adarsh.www.HellpSpring" autowire="byName">
+     <property name="message" value="Hello Spring"> </property>
+       </bean>
+       
+       <!-- Bean 'messageType' defined -->
+     <bean id="messageType" class="com.adarsh.www.MessageType" >
+     <property name="messageType" value="text message"> </property>
+     </bean>
+
+</beans>

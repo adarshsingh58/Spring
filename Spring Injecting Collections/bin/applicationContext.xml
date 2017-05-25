@@ -1,0 +1,50 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id = "message" class = "online.mrwallet.www.Message" >
+   <property name="message" >
+   		<value>Hello Spring</value>
+   </property>
+   <property name="listData" >
+   		<list>
+   			<value>list1</value>
+   			<value>list2</value>
+   			<value>list3</value>
+   			<value>list4</value>
+   		</list>
+   </property>
+   
+   <property name="setData" >
+   		<set>
+   			<value>set1</value>
+   			<value>set2</value>
+   			<value>set3</value>
+   			<value>set4</value>
+   		</set>
+   </property>
+   
+     <property name="mapData" >
+   		<map>
+   			<entry key="1" value="map1"></entry>
+   			<entry key="2" value="map2"></entry>
+   			<entry key="3" value="map3"></entry>
+   			<entry key="4" value="map4"></entry>
+   		</map>
+   </property>
+   
+   <property name="propertiesData" >
+   		<props>
+   			<prop key="1">prop1</prop>
+   			<prop key="2">prop2</prop>
+   			<prop key="3">prop3</prop>
+   			<prop key="4">prop4</prop>
+   		</props>
+   </property>
+   
+   </bean>
+
+</beans>
